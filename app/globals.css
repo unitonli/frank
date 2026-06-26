@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: "Manrope", "Aptos", "Segoe UI", sans-serif;
+    --background: 42 35% 97%;
+    --foreground: 220 20% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 12%;
+    --primary: 220 16% 12%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 174 42% 92%;
+    --secondary-foreground: 180 32% 18%;
+    --muted: 36 24% 94%;
+    --muted-foreground: 220 9% 42%;
+    --accent: 18 86% 94%;
+    --accent-foreground: 18 70% 24%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 14% 90%;
+    --input: 220 14% 90%;
+    --ring: 180 45% 38%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .workspace-grid {
+    background-image:
+      linear-gradient(rgb(15 23 42 / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(15 23 42 / 0.035) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
