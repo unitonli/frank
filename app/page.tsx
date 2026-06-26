@@ -1,7 +1,7 @@
 import { AppShell } from "@/components/layout/app-shell";
+import { ProjectWorkspace } from "@/features/projects/components/project-workspace";
 import { ProjectsPage } from "@/features/projects/components/projects-page";
 import { WorkspaceSetup } from "@/features/projects/components/workspace-setup";
-import { TaskWorkspace } from "@/features/tasks/components/task-workspace";
 import { getWorkspaceState } from "@/lib/workspace/projects";
 
 export const dynamic = "force-dynamic";
@@ -30,7 +30,7 @@ export default async function Home({ searchParams }: HomeProps) {
 
   return (
     <AppShell projectName={selectedProject.name}>
-      <TaskWorkspace />
+      <ProjectWorkspace />
     </AppShell>
   );
 }
